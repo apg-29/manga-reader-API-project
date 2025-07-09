@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<div id="loader" class="spinner"></div>
+<div id="reader" class="reader-container" style="display: none;">
+  <% pages.forEach(page => { %>
+    <img src="<%= page %>" class="manga-page" alt="Manga page">
+  <% }); %>
+</div>
+
+<%- include('../partials/footer') %>
+
+<script>
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('reader').style.display = 'block';
+  });
+</script>
+
+
+

@@ -1,0 +1,340 @@
+.home-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #1e1f26;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.home-container .subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-form input[type="text"],
+.search-form select,
+.search-form button {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.search-form input[type="text"] {
+  background: #2c2d34;
+  color: #f0f0f0;
+  width: 260px;
+  max-width: 100%;
+}
+
+.search-form select {
+  background: #2c2d34;
+  color: #f0f0f0;
+}
+
+.search-form button {
+  background-color: var(--accent, #007bff);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Add padding-bottom to page content to avoid overlap with fixed footer */
+.container,
+.results-container {
+  padding-bottom: 80px; /* height of footer + some spacing */
+}
+/* Styles for the index page of the MangaDex Reader application */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: #111;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-form input[type="text"] {
+    padding: 12px 16px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.search-form input[type="text"]:focus {
+    outline: none;
+    border-color: #5da9dd;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background-color: #5da9dd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+}
+
+.search-form button:hover {
+    background-color: #4b93c4;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Results Page Styles */
+
+.results-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #1e1f26;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+.results-container h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.manga-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.manga-card {
+  background: #1e1f26;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manga-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.manga-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.manga-card p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.manga-card a {
+  text-decoration: none;
+  color: #5da9dd;
+}
+
+.manga-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Styles for the footer */
+
+.site-footer {
+  width: 100%;
+  background-color: #15171e;
+  padding: 10px 0;
+  border-top: 1px solid #2b2e36;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.layout-wrapper {
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.layout-wrapper > *:not(.site-footer) {
+  flex: 1;
+}
+
+.footer-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Styles for the manga chapters /read page */
+.reader-container {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #1e1f26;
+  border-radius: 8px;
+}
+
+.manga-page {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+
+/* Styles for the loading spinner */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #eee;
+  border-top: 8px solid #5da9dd;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 100px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Styles for the manga details page */
+
+.details-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1e1f26;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+
+.details-container h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.manga-cover {
+  width: 200px;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: justify;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tag-item {
+  background-color: #444;
+  color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.chapters-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chapters-list li {
+  margin: 5px 0;
+}
+
+.chapters-list a {
+  color: #5da9dd;
+  text-decoration: none;
+}
+
+.chapters-list a:hover {
+  text-decoration: underline;
+}
