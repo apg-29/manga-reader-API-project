@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<div class="results-container">
+  <h2>Search Results</h2>
+
+  <% if (mangas.length === 0) { %>
+    <p>No results found.</p>
+  <% } else { %>
+    <div class="manga-grid">
+      <% mangas.forEach(manga => { %>
+        <div class="manga-card">
+          <% if (manga.coverUrl) { %>
+            <img src="<%= manga.coverUrl %>" alt="cover">
+          <% } else { %>
+            <div class="no-cover">No cover</div>
+          <% } %>
+          <p><a href="/manga/<%= manga.id %>?lang=<%= lang%>"><%= manga.title %></a></p>
+        </div>
+      <% }); %>
+    </div>
+  <% } %>
+</div>
+
+<%- include('../partials/footer') %>

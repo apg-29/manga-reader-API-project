@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<div class="home-container">
+  <h1>Manga Reader</h1>
+  <p class="subtitle">Search and read your favorite manga — ad-free.</p>
+
+</select>
+  <form action="/search" method="GET" class="search-form">
+    <input type="text" name="title" placeholder="Enter manga title..." required>
+    <select name="lang">
+      <option value="en" <%= lang === 'en' ? 'selected' : '' %>>English</option>
+      <option value="es" <%= lang === 'es' ? 'selected' : '' %>>Spanish</option>
+      <option value="fr" <%= lang === 'fr' ? 'selected' : '' %>>French</option>
+      <option value="pt" <%= lang === 'pt' ? 'selected' : '' %>>Portuguese</option>
+      <option value="de" <%= lang === 'de' ? 'selected' : '' %>>German</option>
+      <option value="ja" <%= lang === 'ja' ? 'selected' : '' %>>Japanese</option>
+      <option value="ko" <%= lang === 'ko' ? 'selected' : '' %>>Korean</option>
+      <option value="zh" <%= lang === 'zh' ? 'selected' : '' %>>Chinese</option>
+      
+    </select>
+    <button type="submit">🔍 Search</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>
+
+

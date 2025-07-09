@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+<div class="details-container">
+  <h2><%= manga.attributes.title.en %></h2>
+
+  <% if (coverUrl) { %>
+    <img src="<%= coverUrl %>" alt="Cover image" class="manga-cover">
+  <% } %>
+
+  <p class="description">
+    <%= manga.attributes.description[lang]?.substring(0, 500) || 'No description available.' %>
+  </p>
+
+  <h3>Tags:</h3>
+  <ul class="tags-list">
+    <% manga.attributes.tags.forEach(tag => { %>
+      <li class="tag-item"><%= tag.attributes.name[lang] || tag.attributes.name.en %></li>
+    <% }); %>
+  </ul>
+
+  <h3>Chapters:</h3>
+  <ul class="chapters-list">
+    <% chapters.forEach(ch => { %>
+      <li>
+        <a href="/read/<%= ch.id %>?lang=<%= lang %>">Chapter <%= ch.number || 'N/A' %>: <%= ch.title || 'Untitled' %></a>
+      </li>
+    <% }); %>
+  </ul>
+</div>
+
+<%- include('../partials/footer') %>
